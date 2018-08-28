@@ -1,7 +1,5 @@
 // https://www.leighhalliday.com/testing-react-jest-enzyme-sinon
-// https://www.robinwieruch.de/react-testing-tutorial/
 import React from "react";
-import { expect } from "chai";
 import Enzyme, { shallow, render, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import { createSerializer } from "enzyme-to-json";
@@ -10,8 +8,6 @@ import sinon from "sinon";
 // Set the default serializer for Jest to be the from enzyme-to-json
 // This produces an easier to read (for humans) serialized format.
 expect.addSnapshotSerializer(createSerializer({ mode: "deep" }));
-
-global.expect = expect;
 
 // React 16 Enzyme adapter
 Enzyme.configure({ adapter: new Adapter() });
